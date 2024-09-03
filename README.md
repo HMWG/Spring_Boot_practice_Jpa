@@ -1,6 +1,6 @@
 # MyTalk
 ## 채팅방 게시판 토이 프로젝트
-Springboot, Mybatis, MySQL, JSP
+Springboot, JPA, MySQL, JSP
 
 ***
 ### ERD
