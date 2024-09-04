@@ -41,7 +41,7 @@ public class ChatService {
     }
 
     public List<ChatDTO> chatList(Long roomId){
-        List<ChatEntity> chatList = chatRepository.findByRoomUser_Room_Id(roomId);
+        List<ChatEntity> chatList = chatRepository.findByRoomUser_Room_IdOrderByCreatedAt(roomId);
         List<ChatDTO> chatDTOList = chatList.stream().map(ChatDTO::new).toList();
         chatDTOList
                 .forEach(chatDTO -> chatDTO.setFileDTOList(fileRepository.findByChat_Id(chatDTO.getChatId()).stream().map(FileDTO::new).toList()));
